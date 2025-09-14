@@ -1,0 +1,75 @@
+{
+  "name": "lumina_app",
+  "version": "1.0.0",
+  "description": "Desktop version of Lumina",
+  "main": "main.js",
+  "scripts": {
+    "setup": "node setup.js",
+    "start": "electron-forge start",
+    "dev": "NODE_ENV=development electron .",
+    "test-streamlit": "cd streamlit_app && streamlit run lumina_app.py",
+    "build": "electron-builder",
+    "dist": "electron-builder --publish=never",
+    "build-win": "electron-builder --win",
+    "build-mac": "electron-builder --mac",
+    "build-linux": "electron-builder --linux",
+    "postinstall": "node setup.js",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "build": {
+    "appId": "com.yourcompany.lumina_app",
+    "productName": "Lumina",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "setup.js",
+      "streamlit_app/**/*",
+      "assets/**/*",
+      "!streamlit_app/**/__pycache__",
+      "!streamlit_app/**/*.pyc"
+    ],
+    "extraResources": [
+      {
+        "from": "streamlit_app",
+        "to": "streamlit_app"
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.9.0",
+    "@electron-forge/maker-deb": "^7.9.0",
+    "@electron-forge/maker-rpm": "^7.9.0",
+    "@electron-forge/maker-squirrel": "^7.9.0",
+    "@electron-forge/maker-zip": "^7.9.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.9.0",
+    "@electron-forge/plugin-fuses": "^7.9.0",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^38.1.0",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1"
+  }
+}
