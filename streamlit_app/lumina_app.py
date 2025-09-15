@@ -1284,7 +1284,7 @@ with st.sidebar:
                 st.session_state.sync_completed = sync_success
                 
                 if sync_success:
-                    st.success("Database sync completed! You can now optionally switch to database mode.")
+                    st.success("Database sync completed!")
                     
                     # Note: Don't modify the checkbox state after widget creation
                     # The checkbox will reset naturally on the next rerun
