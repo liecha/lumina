@@ -18,7 +18,7 @@
     "make": "electron-forge make"
   },
   "build": {
-    "appId": "com.yourcompany.lumina_app",
+    "appId": "com.lumina.healthtracker",
     "productName": "Lumina",
     "directories": {
       "output": "dist"
@@ -28,26 +28,50 @@
       "setup.js",
       "streamlit_app/**/*",
       "assets/**/*",
+      "node_modules/**/*",
       "!streamlit_app/**/__pycache__",
-      "!streamlit_app/**/*.pyc"
+      "!streamlit_app/**/*.pyc",
+      "!streamlit_app/**/.DS_Store"
     ],
     "extraResources": [
       {
         "from": "streamlit_app",
         "to": "streamlit_app"
+      },
+      {
+        "from": "assets",
+        "to": "assets"
       }
     ],
     "win": {
       "target": "nsis",
-      "icon": "assets/icon.ico"
+      "icon": "assets/lumina_1.ico"
     },
     "mac": {
       "target": "dmg",
-      "icon": "assets/icon.icns"
+      "icon": "assets/lumina_1.icns",
+      "category": "public.app-category.healthcare-fitness",
+      "bundleVersion": "1.0.0",
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false,
+      "extendInfo": {
+        "CFBundleExecutable": "Lumina",
+        "CFBundleDisplayName": "Lumina",
+        "CFBundleIdentifier": "com.yourcompany.lumina_app",
+        "CFBundleName": "Lumina",
+        "CFBundleVersion": "1.0.0",
+        "CFBundleShortVersionString": "1.0.0",
+        "LSMinimumSystemVersion": "10.15.0",
+        "NSHighResolutionCapable": true
+      }
+    },
+    "dmg": {
+      "title": "Lumina Health Tracker",
+      "icon": "assets/lumina_1.icns"
     },
     "linux": {
       "target": "AppImage",
-      "icon": "assets/icon.png"
+      "icon": "assets/lumina_1.png"
     },
     "nsis": {
       "oneClick": false,

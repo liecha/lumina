@@ -161,3 +161,43 @@ date,time,name,livsmedel,amount,code,favorite
 2025-09-15,07:00,Basic Oats,Russin,20.0,571/16/66/20,False
 2025-09-15,07:00,Basic Oats,Havregryn fullkorn,80.0,571/16/66/20,False
 2025-09-15,07:00,Basic Oats,Jordnötssmör,20.0,571/16/66/20,False
+2025-09-15,09:50,Basic Oats,Sojadryck,100.0,571/16/66/20,False
+2025-09-15,09:50,Basic Oats,Pumpafrö,10.0,571/16/66/20,False
+2025-09-15,09:50,Basic Oats,Russin,20.0,571/16/66/20,False
+2025-09-15,09:50,Basic Oats,Havregryn fullkorn,80.0,571/16/66/20,False
+2025-09-15,09:50,Basic Oats,Jordnötssmör,20.0,571/16/66/20,False
+2025-09-15,12:45,Ärtfalaffel garant/Ägg rått/Vattenmelon/Persika nektarin/Gurka/Tomat/Squash/Fetaost herb and spices/Vindruvor gröna/Kyckling bröstfilé rå u. skinn/Majskorn frysvara,Ärtfalaffel garant,36.0,410/40/25/9,False
+2025-09-15,12:45,Ärtfalaffel garant/Ägg rått/Vattenmelon/Persika nektarin/Gurka/Tomat/Squash/Fetaost herb and spices/Vindruvor gröna/Kyckling bröstfilé rå u. skinn/Majskorn frysvara,Ägg rått,60.0,410/40/25/9,False
+2025-09-15,12:45,Ärtfalaffel garant/Ägg rått/Vattenmelon/Persika nektarin/Gurka/Tomat/Squash/Fetaost herb and spices/Vindruvor gröna/Kyckling bröstfilé rå u. skinn/Majskorn frysvara,Vattenmelon,146.0,410/40/25/9,False
+2025-09-15,12:45,Ärtfalaffel garant/Ägg rått/Vattenmelon/Persika nektarin/Gurka/Tomat/Squash/Fetaost herb and spices/Vindruvor gröna/Kyckling bröstfilé rå u. skinn/Majskorn frysvara,Persika nektarin,55.0,410/40/25/9,False
+2025-09-15,12:45,Ärtfalaffel garant/Ägg rått/Vattenmelon/Persika nektarin/Gurka/Tomat/Squash/Fetaost herb and spices/Vindruvor gröna/Kyckling bröstfilé rå u. skinn/Majskorn frysvara,Gurka,30.0,410/40/25/9,False
+2025-09-15,12:45,Ärtfalaffel garant/Ägg rått/Vattenmelon/Persika nektarin/Gurka/Tomat/Squash/Fetaost herb and spices/Vindruvor gröna/Kyckling bröstfilé rå u. skinn/Majskorn frysvara,Tomat,34.0,410/40/25/9,False
+2025-09-15,12:45,Ärtfalaffel garant/Ägg rått/Vattenmelon/Persika nektarin/Gurka/Tomat/Squash/Fetaost herb and spices/Vindruvor gröna/Kyckling bröstfilé rå u. skinn/Majskorn frysvara,Squash,0.0,410/40/25/9,False
+2025-09-15,12:45,Ärtfalaffel garant/Ägg rått/Vattenmelon/Persika nektarin/Gurka/Tomat/Squash/Fetaost herb and spices/Vindruvor gröna/Kyckling bröstfilé rå u. skinn/Majskorn frysvara,Fetaost herb and spices,0.0,410/40/25/9,False
+2025-09-15,12:45,Ärtfalaffel garant/Ägg rått/Vattenmelon/Persika nektarin/Gurka/Tomat/Squash/Fetaost herb and spices/Vindruvor gröna/Kyckling bröstfilé rå u. skinn/Majskorn frysvara,Vindruvor gröna,0.0,410/40/25/9,False
+2025-09-15,12:45,Ärtfalaffel garant/Ägg rått/Vattenmelon/Persika nektarin/Gurka/Tomat/Squash/Fetaost herb and spices/Vindruvor gröna/Kyckling bröstfilé rå u. skinn/Majskorn frysvara,Kyckling bröstfilé rå u. skinn,130.0,410/40/25/9,False
+2025-09-15,12:45,Ärtfalaffel garant/Ägg rått/Vattenmelon/Persika nektarin/Gurka/Tomat/Squash/Fetaost herb and spices/Vindruvor gröna/Kyckling bröstfilé rå u. skinn/Majskorn frysvara,Majskorn frysvara,30.0,410/40/25/9,False
+2025-09-15,13:03,Dadlar lakrits/Mörk choklad kakao 70%,Dadlar lakrits,20.0,122/0/16/4,False
+2025-09-15,13:03,Dadlar lakrits/Mörk choklad kakao 70%,Mörk choklad kakao 70%,10.0,122/0/16/4,False
+2025-09-15,13:09,Dadelbollar jordnöt (0.07),Kaffe bryggt,0.0,78/0/9/2,False
+2025-09-15,13:09,Dadelbollar jordnöt (0.07),Jordnötssmör,2.1,78/0/9/2,False
+2025-09-15,13:09,Dadelbollar jordnöt (0.07),Kokosflingor,2.4,78/0/9/2,False
+2025-09-15,13:09,Dadelbollar jordnöt (0.07),Kakaopulver fett 20-22%,0.9,78/0/9/2,False
+2025-09-15,13:09,Dadelbollar jordnöt (0.07),Havregryn fullkorn,2.8,78/0/9/2,False
+2025-09-15,13:09,Dadelbollar jordnöt (0.07),Dadlar färska,14.0,78/0/9/2,False
+2025-09-15,13:09,Dadelbollar jordnöt (0.07),Salt m. jod,0.0,78/0/9/2,False
+2025-09-15,16:09,Ärtfalaffel garant/Ägg rått/Vattenmelon/Persika nektarin/Gurka/Tomat/Squash/Fetaost herb and spices/Vindruvor gröna/Kyckling bröstfilé rå u. skinn/Majskorn frysvara,Ärtfalaffel garant,36.0,356/37/18/9,False
+2025-09-15,16:09,Ärtfalaffel garant/Ägg rått/Vattenmelon/Persika nektarin/Gurka/Tomat/Squash/Fetaost herb and spices/Vindruvor gröna/Kyckling bröstfilé rå u. skinn/Majskorn frysvara,Ägg rått,60.0,356/37/18/9,False
+2025-09-15,16:09,Ärtfalaffel garant/Ägg rått/Vattenmelon/Persika nektarin/Gurka/Tomat/Squash/Fetaost herb and spices/Vindruvor gröna/Kyckling bröstfilé rå u. skinn/Majskorn frysvara,Vattenmelon,72.0,356/37/18/9,False
+2025-09-15,16:09,Ärtfalaffel garant/Ägg rått/Vattenmelon/Persika nektarin/Gurka/Tomat/Squash/Fetaost herb and spices/Vindruvor gröna/Kyckling bröstfilé rå u. skinn/Majskorn frysvara,Persika nektarin,35.0,356/37/18/9,False
+2025-09-15,16:09,Ärtfalaffel garant/Ägg rått/Vattenmelon/Persika nektarin/Gurka/Tomat/Squash/Fetaost herb and spices/Vindruvor gröna/Kyckling bröstfilé rå u. skinn/Majskorn frysvara,Gurka,34.0,356/37/18/9,False
+2025-09-15,16:09,Ärtfalaffel garant/Ägg rått/Vattenmelon/Persika nektarin/Gurka/Tomat/Squash/Fetaost herb and spices/Vindruvor gröna/Kyckling bröstfilé rå u. skinn/Majskorn frysvara,Tomat,28.0,356/37/18/9,False
+2025-09-15,16:09,Ärtfalaffel garant/Ägg rått/Vattenmelon/Persika nektarin/Gurka/Tomat/Squash/Fetaost herb and spices/Vindruvor gröna/Kyckling bröstfilé rå u. skinn/Majskorn frysvara,Squash,0.0,356/37/18/9,False
+2025-09-15,16:09,Ärtfalaffel garant/Ägg rått/Vattenmelon/Persika nektarin/Gurka/Tomat/Squash/Fetaost herb and spices/Vindruvor gröna/Kyckling bröstfilé rå u. skinn/Majskorn frysvara,Fetaost herb and spices,0.0,356/37/18/9,False
+2025-09-15,16:09,Ärtfalaffel garant/Ägg rått/Vattenmelon/Persika nektarin/Gurka/Tomat/Squash/Fetaost herb and spices/Vindruvor gröna/Kyckling bröstfilé rå u. skinn/Majskorn frysvara,Vindruvor gröna,0.0,356/37/18/9,False
+2025-09-15,16:09,Ärtfalaffel garant/Ägg rått/Vattenmelon/Persika nektarin/Gurka/Tomat/Squash/Fetaost herb and spices/Vindruvor gröna/Kyckling bröstfilé rå u. skinn/Majskorn frysvara,Kyckling bröstfilé rå u. skinn,120.0,356/37/18/9,False
+2025-09-15,16:09,Ärtfalaffel garant/Ägg rått/Vattenmelon/Persika nektarin/Gurka/Tomat/Squash/Fetaost herb and spices/Vindruvor gröna/Kyckling bröstfilé rå u. skinn/Majskorn frysvara,Majskorn frysvara,20.0,356/37/18/9,False
+2025-09-15,16:36,Peanut caramel redo proteinbar/Dadlar lakrits/Mörk choklad kakao 70%,Peanut caramel redo proteinbar,40.0,307/11/28/13,False
+2025-09-15,16:36,Peanut caramel redo proteinbar/Dadlar lakrits/Mörk choklad kakao 70%,Dadlar lakrits,20.0,307/11/28/13,False
+2025-09-15,16:36,Peanut caramel redo proteinbar/Dadlar lakrits/Mörk choklad kakao 70%,Mörk choklad kakao 70%,15.0,307/11/28/13,False
+2025-09-15,17:14,Mörk choklad kakao 70%,Mörk choklad kakao 70%,1.0,5/0/0/0,False

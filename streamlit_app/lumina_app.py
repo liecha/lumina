@@ -1,4 +1,6 @@
 import streamlit as st
+import os
+import sys
 import pandas as pd
 
 from scripts.validation import validate_bmr_parameters, display_validation_results
@@ -36,6 +38,9 @@ from scripts.activity_summary import (
     create_training_chart, create_weekly_summary_chart, create_improved_energy_balance_chart, 
     get_available_activities, format_time_period
 )
+
+# Error handleing in terminal: cd dist/mac-arm64/ 
+#./Lumina.app/Contents/MacOS/Lumina
 
 # Clear any corrupted session state on startup
 if 'app_initialized' not in st.session_state:
@@ -101,9 +106,36 @@ st.subheader('Emelie Chandni Jutvik')
 # Show any pending notifications
 show_notifications()
 
+def load_app_image():
+    """Load the app image with fallback handling"""
+    # Get the directory where this script is located
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    # Try different possible image locations
+    image_paths = [
+        os.path.join(script_dir, "lumina_1.png"),                    # Same directory
+        os.path.join(script_dir, "assets", "lumina_1.png"),         # Assets subdirectory
+        os.path.join(script_dir, "..", "assets", "lumina_1.png"),   # Parent assets directory
+    ]
+    
+    for image_path in image_paths:
+        if os.path.exists(image_path):
+            try:
+                return image_path
+            except Exception as e:
+                print(f"Failed to load image from {image_path}: {e}")
+                continue
+    
+    return None
+
+
 # ===================== IMPROVED SIDEBAR WITH VALIDATION AND DATABASE SYNC =====================
 with st.sidebar:
-    st.image("../assets/lumina_1.png")
+    image_path = load_app_image()
+    if image_path:
+        st.image(image_path)
+    else:
+        st.markdown("### 🌟 Lumina") 
 
     # Storage method indicator
     # storage_method = "🗄️ Database (Supabase)" if USE_DATABASE else "📄 CSV Files"
