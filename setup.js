@@ -5,6 +5,35 @@ const path = require('path');
 
 console.log('Setting up Lumina Electron App...');
 
+function createEnvFiles() {
+    console.log('Creating environment files...');
+    
+    // Create .env.template in project root
+    const envTemplatePath = path.join(__dirname, '.env.template');
+    if (!fs.existsSync(envTemplatePath)) {
+        const envTemplate = `# Supabase Configuration
+                            SUPABASE_URL=your_supabase_url_here
+                            SUPABASE_KEY=your_supabase_anon_key_here
+
+                            # App Configuration
+                            NODE_ENV=production
+                            `;
+        fs.writeFileSync(envTemplatePath, envTemplate);
+        console.log('✓ Created .env.template in project root');
+    }
+    
+    // Create .env file if it doesn't exist
+    const envPath = path.join(__dirname, '.env');
+    if (!fs.existsSync(envPath)) {
+        console.log('⚠️  .env file not found. Creating from template...');
+        fs.copyFileSync(envTemplatePath, envPath);
+        console.log('✓ Created .env file from template');
+        console.log('🔑 Please update .env with your actual Supabase credentials');
+    } else {
+        console.log('✓ .env file already exists');
+    }
+}
+
 // Check if Python is installed
 function checkPython() {
     try {
@@ -207,6 +236,9 @@ function main() {
         
         // Install other Python dependencies
         installPythonDeps(pythonCmd);
+
+        // Create environment file template
+        createEnvFiles();
         
         // Test Streamlit
         testStreamlit(pythonCmd);
@@ -219,14 +251,15 @@ function main() {
         
         // Create environment template
         createEnvTemplate();
-        
+
         console.log('\n' + '='.repeat(50));
         console.log('✅ Setup completed successfully!');
         console.log('='.repeat(50));
         console.log('\nNext steps:');
-        console.log('1. Run "npm start" to launch the app');
-        console.log('2. If using database mode, copy .env.template to .env and add your Supabase credentials');
-        console.log('3. The app will be available at http://localhost:8501');
+        console.log('1. Update .env file with your actual Supabase credentials');
+        console.log('2. Run "npm start" to launch the app');
+        console.log('3. The .env file is excluded from git for security');
+        console.log('4. The app will be available at http://localhost:8501');
         console.log('\nTroubleshooting:');
         console.log('- If Streamlit fails to start, try running "streamlit run streamlit_app/lumina_app.py" manually');
         console.log('- Check that all CSV files exist in streamlit_app/data/');

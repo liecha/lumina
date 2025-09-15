@@ -70,6 +70,7 @@
     "electron-builder": "^24.13.3"
   },
   "dependencies": {
+    "dotenv": "^17.2.2",
     "electron-squirrel-startup": "^1.0.1"
   }
 }

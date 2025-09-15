@@ -3,6 +3,8 @@ const { spawn } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 
+require('dotenv').config();
+
 let mainWindow;
 let streamlitProcess;
 
@@ -90,9 +92,16 @@ function startStreamlit() {
     ...process.env,
     STREAMLIT_APP_DIR: path.join(__dirname, 'streamlit_app'),
     STREAMLIT_DATA_DIR: dataDir,
-    SUPABASE_URL: 'https://eqyrpsmcujrbmskpwnlz.supabase.co',
-  SUPABASE_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVxeXJwc21jdWpyYm1za3B3bmx6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY3MDk5NjQsImV4cCI6MjA3MjI4NTk2NH0.mf8n__NtBiJj9ZKOQrkFX8HWP4ZvgFyBdNgPIKtydoI'
+    SUPABASE_URL: process.env.SUPABASE_URL,
+    SUPABASE_KEY: process.env.SUPABASE_KEY
   };
+
+  // Add validation to ensure credentials are loaded
+  if (!env.SUPABASE_URL || !env.SUPABASE_KEY) {
+    console.error('ERROR: Supabase credentials not found in environment variables.');
+    console.error('Please create a .env file with SUPABASE_URL and SUPABASE_KEY');
+    return;
+  }
   
   // Start Streamlit with proper working directory
   streamlitProcess = spawn('streamlit', [

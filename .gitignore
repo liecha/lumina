@@ -5,6 +5,7 @@ dist/
 .env
 .env.local
 .env.*.local
+!.env.template
 .DS_Store
 .vscode/
 .idea/
