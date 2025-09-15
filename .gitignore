@@ -1,3 +1,12 @@
 node_modules
 out/
 dist/
+.streamlit/
+.env
+.env.local
+.env.*.local
+.DS_Store
+.vscode/
+.idea/
+*.log
+*.lock
