@@ -15,7 +15,8 @@
     "build-linux": "electron-builder --linux",
     "postinstall": "node setup.js",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "rebuild": "electron-rebuild"
   },
   "build": {
     "appId": "com.lumina.healthtracker",
@@ -26,26 +27,37 @@
     "files": [
       "main.js",
       "setup.js",
-      "streamlit_app/**/*",
-      "assets/**/*",
-      "node_modules/**/*",
+      "package.json",
       "!streamlit_app/**/__pycache__",
       "!streamlit_app/**/*.pyc",
-      "!streamlit_app/**/.DS_Store"
+      "!streamlit_app/**/.DS_Store",
+      "!node_modules/.cache",
+      "!dist"
     ],
     "extraResources": [
       {
         "from": "streamlit_app",
-        "to": "streamlit_app"
+        "to": "streamlit_app",
+        "filter": [
+          "**/*",
+          "!**/__pycache__",
+          "!**/*.pyc",
+          "!**/.DS_Store"
+        ]
       },
       {
         "from": "assets",
         "to": "assets"
+      },
+      {
+        "from": ".env.template",
+        "to": ".env.template"
       }
     ],
     "win": {
       "target": "nsis",
-      "icon": "assets/lumina_1.ico"
+      "icon": "assets/lumina_1.ico",
+      "requestedExecutionLevel": "asInvoker"
     },
     "mac": {
       "target": "dmg",
@@ -54,6 +66,7 @@
       "bundleVersion": "1.0.0",
       "hardenedRuntime": false,
       "gatekeeperAssess": false,
+      "type": "distribution",
       "extendInfo": {
         "CFBundleExecutable": "Lumina",
         "CFBundleDisplayName": "Lumina",
@@ -62,23 +75,33 @@
         "CFBundleVersion": "1.0.0",
         "CFBundleShortVersionString": "1.0.0",
         "LSMinimumSystemVersion": "10.15.0",
-        "NSHighResolutionCapable": true
+        "NSHighResolutionCapable": true,
+        "LSEnvironment": {
+          "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+        }
       }
     },
     "dmg": {
       "title": "Lumina Health Tracker",
-      "icon": "assets/lumina_1.icns"
+      "icon": "assets/lumina_1.icns",
+      "background": null,
+      "window": {
+        "width": 540,
+        "height": 380
+      }
     },
     "linux": {
       "target": "AppImage",
-      "icon": "assets/lumina_1.png"
+      "icon": "assets/lumina_1.png",
+      "category": "Utility"
     },
     "nsis": {
       "oneClick": false,
       "perMachine": false,
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
-      "createStartMenuShortcut": true
+      "createStartMenuShortcut": true,
+      "license": null
     }
   },
   "devDependencies": {
@@ -91,7 +114,8 @@
     "@electron-forge/plugin-fuses": "^7.9.0",
     "@electron/fuses": "^1.8.0",
     "electron": "^38.1.0",
-    "electron-builder": "^24.13.3"
+    "electron-builder": "^24.13.3",
+    "electron-rebuild": "^3.2.9"
   },
   "dependencies": {
     "dotenv": "^17.2.2",

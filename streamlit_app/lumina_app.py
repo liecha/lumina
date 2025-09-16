@@ -42,6 +42,12 @@ from scripts.activity_summary import (
 # Error handleing in terminal: cd dist/mac-arm64/ 
 #./Lumina.app/Contents/MacOS/Lumina
 
+# FILES
+# Lumina.app/Contents/Resources/streamlit_app/data/
+# Right-click on Lumina.app
+# Select "Show Package Contents"
+# Navigate to Contents/Resources/streamlit_app/data/
+
 # Clear any corrupted session state on startup
 if 'app_initialized' not in st.session_state:
     # Clear all session state on first run
